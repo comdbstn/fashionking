@@ -308,7 +308,7 @@ const App = () => {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            src="https://raw.githubusercontent.com/comdbstn/fashionking/main/public/images/section1-phone.png"
+            src="/images/section1-phone.png"
             alt="Phone Mockup"
             className="w-full h-auto relative z-10"
           />
@@ -452,7 +452,7 @@ const App = () => {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            src="https://raw.githubusercontent.com/comdbstn/fashionking/main/public/images/section2-iphone.png"
+            src="/images/section2-iphone.png"
             alt="iPhone Background"
             className="w-full h-full object-cover brightness-75"
           />
@@ -580,7 +580,7 @@ const App = () => {
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
-                        src="https://raw.githubusercontent.com/comdbstn/fashionking/main/public/images/screen1,2.png"
+                        src="/images/screen1,2.png"
                         alt="AI Fashion Comparison"
                         className="w-full h-full object-cover rounded-2xl shadow-lg"
                       />
@@ -665,7 +665,7 @@ const App = () => {
                       whileInView={{ y: 0, opacity: 1 }}
                       viewport={{ once: true, amount: 0.3 }}
                       transition={{ duration: 0.8, delay: 0.4 }}
-                      src="https://raw.githubusercontent.com/comdbstn/fashionking/main/public/images/section5-vsimage.png"
+                      src="/images/section5-vsimage.png"
                       alt="Battle System"
                       className="w-full max-w-3xl mx-auto rounded-2xl shadow-lg"
                     />
@@ -756,7 +756,7 @@ const App = () => {
                       whileInView={{ y: 0, opacity: 1 }}
                       viewport={{ once: true, amount: 0.3 }}
                       transition={{ duration: 0.8, delay: 0.4 }}
-                      src="https://raw.githubusercontent.com/comdbstn/fashionking/main/public/images/section6-trophy.png"
+                      src="/images/section6-trophy.png"
                       alt="Ranking System Trophy"
                       className="w-full max-w-3xl mx-auto rounded-2xl shadow-lg"
                     />
