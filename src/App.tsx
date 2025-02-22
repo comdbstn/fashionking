@@ -652,8 +652,8 @@ const App = () => {
       </section>
 
       {/* Ranking System Section */}
-      <section className="scroll-section">
-        <div className="scroll-section-content bg-black flex items-center">
+      <section className="scroll-section h-screen w-full bg-black relative overflow-hidden">
+        <div className="h-full flex items-center">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -662,13 +662,13 @@ const App = () => {
             className="absolute inset-0 bg-gradient-to-tr from-black via-black to-[#ee020215]"
           />
           <div className="container mx-auto px-4 relative z-10">
-            <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-12">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8 }}
-                className="w-full md:w-1/2 mb-8 md:mb-0"
+                className="w-full md:w-1/2"
               >
                 <motion.span 
                   initial={{ opacity: 0, y: 20 }}
@@ -710,7 +710,7 @@ const App = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="w-full md:w-1/2 flex justify-center items-center"
               >
-                <div className="relative">
+                <div className="relative w-full max-w-2xl">
                   <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
@@ -725,7 +725,7 @@ const App = () => {
                       transition={{ duration: 0.8, delay: 0.4 }}
                       src="/fashionking/images/section6-trophy.png"
                       alt="Ranking System Trophy"
-                      className="w-full max-w-3xl mx-auto rounded-2xl shadow-lg"
+                      className="w-full rounded-2xl shadow-lg"
                     />
                   </motion.div>
                   <motion.div 
