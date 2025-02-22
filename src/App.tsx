@@ -2,13 +2,6 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState, useRef } from 'react';
 
-// Import images
-import section1Phone from './assets/section1-phone.png';
-import section2Iphone from './assets/section2-iphone.png';
-import screen12 from './assets/screen1,2.png';
-import section5Vsimage from './assets/section5-vsimage.png';
-import section6Trophy from './assets/section6-trophy.png';
-
 const App = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -282,7 +275,7 @@ const App = () => {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            src={section1Phone}
+            src="/images/section1-phone.png"
             alt="Phone Mockup"
             className="w-full h-auto relative z-10"
           />
@@ -426,7 +419,7 @@ const App = () => {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            src={section2Iphone}
+            src="/images/section2-iphone.png"
             alt="iPhone Background"
             className="w-full h-full object-cover brightness-75"
           />
@@ -554,7 +547,7 @@ const App = () => {
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
-                        src={screen12}
+                        src="/images/screen1,2.png"
                         alt="AI Fashion Comparison"
                         className="w-full h-full object-cover rounded-2xl shadow-lg"
                       />
@@ -639,7 +632,7 @@ const App = () => {
                       whileInView={{ y: 0, opacity: 1 }}
                       viewport={{ once: true, amount: 0.3 }}
                       transition={{ duration: 0.8, delay: 0.4 }}
-                      src={section5Vsimage}
+                      src="/images/section5-vsimage.png"
                       alt="Battle System"
                       className="w-full max-w-3xl mx-auto rounded-2xl shadow-lg"
                     />
@@ -730,7 +723,7 @@ const App = () => {
                       whileInView={{ y: 0, opacity: 1 }}
                       viewport={{ once: true, amount: 0.3 }}
                       transition={{ duration: 0.8, delay: 0.4 }}
-                      src={section6Trophy}
+                      src="/images/section6-trophy.png"
                       alt="Ranking System Trophy"
                       className="w-full max-w-3xl mx-auto rounded-2xl shadow-lg"
                     />
