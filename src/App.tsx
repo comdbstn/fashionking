@@ -1,12 +1,12 @@
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState, useRef } from 'react';
+import './App.css';
 
 const App = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     container: containerRef,
-    offset: ["start start", "end end"]
   });
   
   const scaleY = useSpring(scrollYProgress, {
@@ -81,7 +81,7 @@ const App = () => {
   };
 
   return (
-    <div ref={containerRef} className="w-full h-screen overflow-y-auto scroll-container">
+    <div ref={containerRef} className="w-full h-screen overflow-y-auto scroll-smooth">
       {/* Progress Bar */}
       <motion.div className="fixed left-[40px] top-1/2 -translate-y-1/2 w-[3px] h-[200px] bg-gray-800 rounded-full z-50">
         <motion.div
@@ -275,7 +275,7 @@ const App = () => {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            src="/images/section1-phone.png"
+            src="./images/section1-phone.png"
             alt="Phone Mockup"
             className="w-full h-auto relative z-10"
           />
@@ -419,7 +419,7 @@ const App = () => {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            src="/images/section2-iphone.png"
+            src="./images/section2-iphone.png"
             alt="iPhone Background"
             className="w-full h-full object-cover brightness-75"
           />
@@ -547,7 +547,7 @@ const App = () => {
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
-                        src="/images/screen1,2.png"
+                        src="./images/screen1,2.png"
                         alt="AI Fashion Comparison"
                         className="w-full h-full object-cover rounded-2xl shadow-lg"
                       />
@@ -561,8 +561,8 @@ const App = () => {
       </section>
 
       {/* Battle Section */}
-      <section className="scroll-section">
-        <div className="scroll-section-content bg-black flex items-center">
+      <section className="scroll-section h-screen w-full bg-black relative overflow-hidden">
+        <div className="h-full flex items-center">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -571,13 +571,13 @@ const App = () => {
             className="absolute inset-0 bg-gradient-to-bl from-black via-black to-[#ee020215]"
           />
           <div className="container mx-auto px-4 relative z-10">
-            <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-12">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8 }}
-                className="w-full md:w-1/2 mb-8 md:mb-0"
+                className="w-full md:w-1/2"
               >
                 <motion.span 
                   initial={{ opacity: 0, y: 20 }}
@@ -593,7 +593,7 @@ const App = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-white text-4xl md:text-5xl font-bold mb-6"
+                  className="text-white text-4xl md:text-5xl font-bold mb-8"
                 >
                   내 패션력,<br />
                   쫄에서<br />
@@ -608,7 +608,7 @@ const App = () => {
                 >
                   쫄이 마련한 다양한 패션 배틀 카테고리에서<br />
                   패피들의 모든 코디를 공개하여<br />
-                  유저들의 오지랖과 함께 검증을 받을 수있도록 합니다.
+                  유저들의 오지랖과 함께 검증을 받을 수 있도록 합니다.
                 </motion.p>
               </motion.div>
 
@@ -619,7 +619,7 @@ const App = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="w-full md:w-1/2 flex justify-center items-center"
               >
-                <div className="relative">
+                <div className="relative w-full max-w-2xl">
                   <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
@@ -632,9 +632,9 @@ const App = () => {
                       whileInView={{ y: 0, opacity: 1 }}
                       viewport={{ once: true, amount: 0.3 }}
                       transition={{ duration: 0.8, delay: 0.4 }}
-                      src="/images/section5-vsimage.png"
+                      src="./images/section5-vsimage.png"
                       alt="Battle System"
-                      className="w-full max-w-3xl mx-auto rounded-2xl shadow-lg"
+                      className="w-full rounded-2xl shadow-lg"
                     />
                   </motion.div>
                   <motion.div 
@@ -723,7 +723,7 @@ const App = () => {
                       whileInView={{ y: 0, opacity: 1 }}
                       viewport={{ once: true, amount: 0.3 }}
                       transition={{ duration: 0.8, delay: 0.4 }}
-                      src="/images/section6-trophy.png"
+                      src="./images/section6-trophy.png"
                       alt="Ranking System Trophy"
                       className="w-full max-w-3xl mx-auto rounded-2xl shadow-lg"
                     />
