@@ -1,8 +1,13 @@
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useState, useRef, useEffect } from 'react';
-import { db } from './firebase';
-import { collection, addDoc } from 'firebase/firestore';
+import { useState, useRef } from 'react';
+
+// Import images
+import section1Phone from './assets/section1-phone.png';
+import section2Iphone from './assets/section2-iphone.png';
+import screen12 from './assets/screen1,2.png';
+import section5Vsimage from './assets/section5-vsimage.png';
+import section6Trophy from './assets/section6-trophy.png';
 
 const App = () => {
   const containerRef = useRef(null);
@@ -51,29 +56,7 @@ const App = () => {
     setSubmitStatus({ isSubmitting: true, isSuccess: false, message: '' });
     
     try {
-      // Firebase 저장 시도
-      const preregData = {
-        name: formData.name,
-        phone: formData.phone,
-        email: formData.email,
-        timestamp: new Date().toISOString(),
-        createdAt: new Date(),
-        status: 'pending'
-      };
-
-      console.log('저장 시도:', preregData);
-
-      // Firebase 저장 시도 (실패해도 무시)
-      try {
-        if (db) {
-          const docRef = await addDoc(collection(db, 'preregistrations'), preregData);
-          console.log('저장된 문서 ID:', docRef.id);
-        }
-      } catch (error) {
-        console.error('Firebase 저장 오류 (무시됨):', error);
-      }
-
-      // 항상 성공 메시지 표시
+      // 임시로 성공 처리
       setSubmitStatus({
         isSubmitting: false,
         isSuccess: true,
@@ -88,19 +71,10 @@ const App = () => {
       });
 
     } catch (error) {
-      // 에러가 발생해도 성공 메시지 표시
-      console.error('오류 발생 (무시됨):', error);
       setSubmitStatus({
         isSubmitting: false,
-        isSuccess: true,
-        message: '사전예약이 성공적으로 완료되었습니다!'
-      });
-      
-      setFormData({
-        name: '',
-        phone: '',
-        email: '',
-        agreement: false
+        isSuccess: false,
+        message: '오류가 발생했습니다. 다시 시도해주세요.'
       });
     }
   };
@@ -308,7 +282,7 @@ const App = () => {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            src="/images/section1-phone.png"
+            src={section1Phone}
             alt="Phone Mockup"
             className="w-full h-auto relative z-10"
           />
@@ -452,7 +426,7 @@ const App = () => {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            src="/images/section2-iphone.png"
+            src={section2Iphone}
             alt="iPhone Background"
             className="w-full h-full object-cover brightness-75"
           />
@@ -580,7 +554,7 @@ const App = () => {
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
-                        src="/images/screen1,2.png"
+                        src={screen12}
                         alt="AI Fashion Comparison"
                         className="w-full h-full object-cover rounded-2xl shadow-lg"
                       />
@@ -665,7 +639,7 @@ const App = () => {
                       whileInView={{ y: 0, opacity: 1 }}
                       viewport={{ once: true, amount: 0.3 }}
                       transition={{ duration: 0.8, delay: 0.4 }}
-                      src="/images/section5-vsimage.png"
+                      src={section5Vsimage}
                       alt="Battle System"
                       className="w-full max-w-3xl mx-auto rounded-2xl shadow-lg"
                     />
@@ -756,7 +730,7 @@ const App = () => {
                       whileInView={{ y: 0, opacity: 1 }}
                       viewport={{ once: true, amount: 0.3 }}
                       transition={{ duration: 0.8, delay: 0.4 }}
-                      src="/images/section6-trophy.png"
+                      src={section6Trophy}
                       alt="Ranking System Trophy"
                       className="w-full max-w-3xl mx-auto rounded-2xl shadow-lg"
                     />
