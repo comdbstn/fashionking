@@ -561,7 +561,7 @@ const App = () => {
       </section>
 
       {/* Battle Section */}
-      <section className="scroll-section h-screen w-full bg-black relative overflow-hidden">
+      <section className="h-screen w-full bg-black relative overflow-hidden">
         <div className="h-full flex items-center">
           <motion.div
             initial={{ opacity: 0 }}
@@ -652,8 +652,8 @@ const App = () => {
       </section>
 
       {/* Ranking System Section */}
-      <section className="h-screen w-full bg-black relative overflow-hidden">
-        <div className="h-full flex items-center">
+      <section className="min-h-screen w-full bg-black relative overflow-hidden">
+        <div className="min-h-screen flex items-center py-20">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
