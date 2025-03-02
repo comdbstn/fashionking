@@ -81,7 +81,7 @@ const App = () => {
   };
 
   return (
-    <div ref={containerRef} className="w-full h-screen overflow-y-auto scroll-smooth">
+    <div ref={containerRef} className="w-full overflow-y-auto">
       {/* Progress Bar */}
       <motion.div className="fixed left-[40px] top-1/2 -translate-y-1/2 w-[3px] h-[200px] bg-gray-800 rounded-full z-50">
         <motion.div
@@ -98,7 +98,7 @@ const App = () => {
       </motion.div>
 
       {/* Hero Section */}
-      <section className="scroll-section h-screen w-full bg-black flex items-center relative overflow-hidden">
+      <section className="h-screen w-full bg-black flex items-center relative overflow-hidden">
         {/* Dynamic Background Elements */}
         <motion.div
           animate={{
@@ -273,7 +273,7 @@ const App = () => {
           <motion.img
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             src="/images/section1-phone.png"
             alt="Phone Mockup"
@@ -311,7 +311,7 @@ const App = () => {
       </section>
 
       {/* Pre-registration Section */}
-      <section ref={preRegisterRef} className="scroll-section h-screen w-full bg-black flex items-center justify-center relative">
+      <section ref={preRegisterRef} className="h-screen w-full bg-black flex items-center justify-center relative">
         <div className="container mx-auto px-4 max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -406,7 +406,7 @@ const App = () => {
       </section>
 
       {/* Device Section */}
-      <section className="scroll-section h-screen w-full bg-black relative overflow-hidden">
+      <section className="h-screen w-full bg-black relative overflow-hidden">
         {/* Background Image */}
         <motion.div 
           initial={{ scale: 1.1, opacity: 0 }}
@@ -417,7 +417,7 @@ const App = () => {
           <motion.img
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             src="/images/section2-iphone.png"
             alt="iPhone Background"
@@ -468,8 +468,8 @@ const App = () => {
       </section>
 
       {/* AI Technology Section */}
-      <section className="scroll-section">
-        <div className="scroll-section-content bg-black flex items-center">
+      <section className="min-h-screen w-full bg-black relative overflow-hidden">
+        <div className="min-h-screen flex items-center py-20">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -482,7 +482,7 @@ const App = () => {
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.8 }}
                 className="w-full md:w-1/2 mb-8 md:mb-0"
               >
@@ -561,8 +561,8 @@ const App = () => {
       </section>
 
       {/* Battle Section */}
-      <section className="h-screen w-full bg-black relative overflow-hidden">
-        <div className="h-full flex items-center">
+      <section className="min-h-screen w-full bg-black relative overflow-hidden">
+        <div className="min-h-screen flex items-center py-20">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
