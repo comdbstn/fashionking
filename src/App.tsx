@@ -241,7 +241,7 @@ const App = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="absolute right-[5%] md:right-[15%] bottom-[10%] md:bottom-[15%] w-[250px] md:w-[350px] rotate-[-15deg]"
+          className="absolute right-[5%] md:right-[15%] bottom-[5%] md:bottom-[15%] w-[200px] md:w-[350px] rotate-[-15deg]"
         >
           {/* Dynamic Background Behind Phone */}
           <motion.div
@@ -526,7 +526,7 @@ const App = () => {
                 transition={{ duration: 1 }}
                 className="w-full md:w-1/2 relative"
               >
-                <div className="relative h-[90vh]">
+                <div className="relative h-[50vh] md:h-[90vh]">
                   <motion.div 
                     initial={{ opacity: 0, x: 100 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -549,7 +549,7 @@ const App = () => {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         src="/images/screen1-2.png"
                         alt="AI Fashion Comparison"
-                        className="w-full h-full object-cover rounded-2xl shadow-lg"
+                        className="w-full h-full object-contain md:object-cover rounded-2xl shadow-lg"
                       />
                     </div>
                   </motion.div>
@@ -619,7 +619,7 @@ const App = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="w-full md:w-1/2 flex justify-center items-center"
               >
-                <div className="relative w-full max-w-2xl">
+                <div className="relative w-full max-w-2xl px-4 md:px-0">
                   <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
@@ -634,7 +634,7 @@ const App = () => {
                       transition={{ duration: 0.8, delay: 0.4 }}
                       src="/images/section5-vsimage.png"
                       alt="Battle System"
-                      className="w-full rounded-2xl shadow-lg"
+                      className="w-full h-auto object-contain md:object-cover rounded-2xl shadow-lg"
                     />
                   </motion.div>
                   <motion.div 
@@ -642,7 +642,7 @@ const App = () => {
                     whileInView={{ scale: 1, opacity: 0.6 }}
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 1.2, delay: 0.2 }}
-                    className="absolute bottom-[-20%] left-1/2 transform -translate-x-1/2 w-96 h-96 bg-[#ee0202] rounded-full blur-3xl -z-10" 
+                    className="absolute bottom-[-10%] md:bottom-[-20%] left-1/2 transform -translate-x-1/2 w-64 md:w-96 h-64 md:h-96 bg-[#ee0202] rounded-full blur-3xl -z-10" 
                   />
                 </div>
               </motion.div>
@@ -710,7 +710,7 @@ const App = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="w-full md:w-1/2 flex justify-center items-center"
               >
-                <div className="relative w-full max-w-2xl">
+                <div className="relative w-full max-w-2xl px-4 md:px-0">
                   <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
@@ -725,7 +725,7 @@ const App = () => {
                       transition={{ duration: 0.8, delay: 0.4 }}
                       src="/images/section6-trophy.png"
                       alt="Ranking System Trophy"
-                      className="w-full rounded-2xl shadow-lg"
+                      className="w-full h-auto object-contain md:object-cover rounded-2xl shadow-lg"
                     />
                   </motion.div>
                   <motion.div 
@@ -733,7 +733,7 @@ const App = () => {
                     whileInView={{ scale: 1, opacity: 0.6 }}
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 1.2, delay: 0.2 }}
-                    className="absolute bottom-[-20%] left-1/2 transform -translate-x-1/2 w-96 h-96 bg-[#ee0202] rounded-full blur-3xl -z-10" 
+                    className="absolute bottom-[-10%] md:bottom-[-20%] left-1/2 transform -translate-x-1/2 w-64 md:w-96 h-64 md:h-96 bg-[#ee0202] rounded-full blur-3xl -z-10" 
                   />
                 </div>
               </motion.div>
