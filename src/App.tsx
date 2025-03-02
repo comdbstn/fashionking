@@ -182,12 +182,12 @@ const App = () => {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col text-white max-w-3xl ml-24 mt-20">
+          <div className="flex flex-col text-white max-w-3xl md:ml-24 mt-10 md:mt-20">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-xl md:text-2xl mb-6 text-left"
+              className="text-lg md:text-2xl mb-4 md:mb-6 text-left"
             >
               한 번도 본적 없었던 패션 배틀 플랫폼
             </motion.h1>
@@ -195,7 +195,7 @@ const App = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-3xl md:text-5xl font-bold mb-12 text-left leading-relaxed"
+              className="text-2xl md:text-5xl font-bold mb-8 md:mb-12 text-left leading-relaxed"
             >
               패션 피플들이
               <br />
@@ -241,7 +241,7 @@ const App = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="absolute right-[15%] bottom-[15%] w-[350px] rotate-[-15deg]"
+          className="absolute right-[5%] md:right-[15%] bottom-[10%] md:bottom-[15%] w-[250px] md:w-[350px] rotate-[-15deg]"
         >
           {/* Dynamic Background Behind Phone */}
           <motion.div
@@ -469,7 +469,7 @@ const App = () => {
 
       {/* AI Technology Section */}
       <section className="scroll-section snap-start min-h-screen w-full bg-black relative overflow-hidden">
-        <div className="min-h-screen flex items-center py-20">
+        <div className="min-h-screen flex items-center py-10 md:py-20">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -478,7 +478,7 @@ const App = () => {
             className="absolute inset-0 bg-gradient-to-br from-black via-black to-[#ee020215]"
           />
           <div className="container mx-auto px-4 relative z-10">
-            <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -500,7 +500,7 @@ const App = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-white text-4xl md:text-5xl font-bold mb-6"
+                  className="text-white text-3xl md:text-5xl font-bold mb-6"
                 >
                   입맛에 맞게<br />
                   근데 또 제약은 없이,<br />
@@ -511,7 +511,7 @@ const App = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-gray-400 text-lg leading-relaxed"
+                  className="text-gray-400 text-base md:text-lg leading-relaxed"
                 >
                   쫄의 AI 기술은 더 이상 분리된 가상의 아바타를 꾸밀 필요 없이<br />
                   유저가 오로지 자신만을 위한 "스타일링"을 할 만큼 수 있도록 합니다.<br />
@@ -562,7 +562,7 @@ const App = () => {
 
       {/* Battle Section */}
       <section className="scroll-section snap-start min-h-screen w-full bg-black relative overflow-hidden">
-        <div className="min-h-screen flex items-center py-20">
+        <div className="min-h-screen flex items-center py-10 md:py-20">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -571,7 +571,7 @@ const App = () => {
             className="absolute inset-0 bg-gradient-to-bl from-black via-black to-[#ee020215]"
           />
           <div className="container mx-auto px-4 relative z-10">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -593,7 +593,7 @@ const App = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-white text-4xl md:text-5xl font-bold mb-8"
+                  className="text-white text-3xl md:text-5xl font-bold mb-6"
                 >
                   내 패션력,<br />
                   쫄에서<br />
@@ -604,7 +604,7 @@ const App = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-gray-400 text-lg leading-relaxed"
+                  className="text-gray-400 text-base md:text-lg leading-relaxed"
                 >
                   쫄이 마련한 다양한 패션 배틀 카테고리에서<br />
                   패피들의 모든 코디를 공개하여<br />
@@ -653,7 +653,7 @@ const App = () => {
 
       {/* Ranking System Section */}
       <section className="scroll-section snap-start min-h-screen w-full bg-black relative overflow-hidden">
-        <div className="min-h-screen flex items-center py-20">
+        <div className="min-h-screen flex items-center py-10 md:py-20">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -662,7 +662,7 @@ const App = () => {
             className="absolute inset-0 bg-gradient-to-tr from-black via-black to-[#ee020215]"
           />
           <div className="container mx-auto px-4 relative z-10">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -684,7 +684,7 @@ const App = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-white text-4xl md:text-5xl font-bold mb-6"
+                  className="text-white text-3xl md:text-5xl font-bold mb-6"
                 >
                   패션 랭킹 관리로,<br />
                   내 감각에<br />
@@ -695,7 +695,7 @@ const App = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-gray-400 text-lg leading-relaxed"
+                  className="text-gray-400 text-base md:text-lg leading-relaxed"
                 >
                   쫄은 시존재 형식의 계층 기반 시스템으로<br />
                   경쟁 형식을 체택함으로써 유저의 명성을 조성합니다.<br />
@@ -745,13 +745,13 @@ const App = () => {
       {/* Footer Section */}
       <footer className="snap-start w-full bg-black relative">
         <div className="border-t border-gray-800">
-          <div className="container mx-auto px-4 py-16">
-            <div className="flex flex-col items-center mb-12">
+          <div className="container mx-auto px-4 py-10 md:py-16">
+            <div className="flex flex-col items-center mb-8 md:mb-12">
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-3xl font-bold mb-4"
+                className="text-2xl md:text-3xl font-bold mb-4"
               >
                 Contact Us
               </motion.h2>
