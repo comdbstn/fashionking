@@ -547,7 +547,7 @@ const App = () => {
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
-                        src="/images/screen1,2.png"
+                        src="/images/screen1-2.png"
                         alt="AI Fashion Comparison"
                         className="w-full h-full object-cover rounded-2xl shadow-lg"
                       />
