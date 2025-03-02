@@ -2,6 +2,7 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState, useRef } from 'react';
 import './App.css';
+import { addPreRegistration } from './services/googleSheets';
 
 const App = () => {
   const containerRef = useRef(null);
@@ -49,19 +50,28 @@ const App = () => {
     setSubmitStatus({ isSubmitting: true, isSuccess: false, message: '' });
     
     try {
-      // 임시로 성공 처리
-      setSubmitStatus({
-        isSubmitting: false,
-        isSuccess: true,
-        message: '사전예약이 성공적으로 완료되었습니다!'
+      const result = await addPreRegistration({
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email
       });
-      
-      setFormData({
-        name: '',
-        phone: '',
-        email: '',
-        agreement: false
-      });
+
+      if (result.success) {
+        setSubmitStatus({
+          isSubmitting: false,
+          isSuccess: true,
+          message: '사전예약이 성공적으로 완료되었습니다!'
+        });
+        
+        setFormData({
+          name: '',
+          phone: '',
+          email: '',
+          agreement: false
+        });
+      } else {
+        throw new Error('Failed to submit pre-registration');
+      }
 
     } catch (error) {
       setSubmitStatus({
@@ -81,7 +91,7 @@ const App = () => {
   };
 
   return (
-    <div ref={containerRef} className="w-full h-screen overflow-y-auto snap-y snap-mandatory">
+    <div ref={containerRef} className="w-full h-screen overflow-y-auto">
       {/* Progress Bar */}
       <motion.div className="fixed left-[40px] top-1/2 -translate-y-1/2 w-[3px] h-[200px] bg-gray-800 rounded-full z-50">
         <motion.div
@@ -98,7 +108,7 @@ const App = () => {
       </motion.div>
 
       {/* Hero Section */}
-      <section className="scroll-section snap-start h-[100dvh] w-full bg-black flex items-center relative overflow-hidden">
+      <section className="min-h-[100dvh] w-full bg-black flex items-center relative overflow-hidden">
         {/* Dynamic Background Elements */}
         <motion.div
           animate={{
@@ -311,7 +321,7 @@ const App = () => {
       </section>
 
       {/* Pre-registration Section */}
-      <section ref={preRegisterRef} className="scroll-section snap-start h-[100dvh] w-full bg-black flex items-center justify-center relative">
+      <section ref={preRegisterRef} className="min-h-[100dvh] w-full bg-black flex items-center justify-center relative">
         <div className="container mx-auto px-4 max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -406,7 +416,7 @@ const App = () => {
       </section>
 
       {/* Device Section */}
-      <section className="scroll-section snap-start h-[100dvh] w-full bg-black relative overflow-hidden">
+      <section className="min-h-[100dvh] w-full bg-black relative overflow-hidden">
         {/* Background Image */}
         <motion.div 
           initial={{ scale: 1.1, opacity: 0 }}
@@ -468,7 +478,7 @@ const App = () => {
       </section>
 
       {/* AI Technology Section */}
-      <section className="scroll-section snap-start min-h-[100dvh] w-full bg-black relative overflow-hidden">
+      <section className="min-h-[100dvh] w-full bg-black relative overflow-hidden">
         <div className="min-h-[100dvh] flex items-center py-10 md:py-20">
           <motion.div
             initial={{ opacity: 0 }}
@@ -561,7 +571,7 @@ const App = () => {
       </section>
 
       {/* Battle Section */}
-      <section className="scroll-section snap-start min-h-[100dvh] w-full bg-black relative overflow-hidden">
+      <section className="min-h-[100dvh] w-full bg-black relative overflow-hidden">
         <div className="min-h-[100dvh] flex items-center py-10 md:py-20">
           <motion.div
             initial={{ opacity: 0 }}
@@ -652,7 +662,7 @@ const App = () => {
       </section>
 
       {/* Ranking System Section */}
-      <section className="scroll-section snap-start min-h-[100dvh] w-full bg-black relative overflow-hidden">
+      <section className="min-h-[100dvh] w-full bg-black relative overflow-hidden">
         <div className="min-h-[100dvh] flex items-center py-10 md:py-20">
           <motion.div
             initial={{ opacity: 0 }}
@@ -743,7 +753,7 @@ const App = () => {
       </section>
 
       {/* Footer Section */}
-      <footer className="snap-start min-h-[50dvh] w-full bg-black relative">
+      <footer className="min-h-[50dvh] w-full bg-black relative">
         <div className="border-t border-gray-800">
           <div className="container mx-auto px-4 py-10 md:py-16">
             <div className="flex flex-col items-center mb-8 md:mb-12">
