@@ -652,7 +652,7 @@ const App = () => {
       </section>
 
       {/* Ranking System Section */}
-      <section className="scroll-section h-screen w-full bg-black relative overflow-hidden">
+      <section className="h-screen w-full bg-black relative overflow-hidden">
         <div className="h-full flex items-center">
           <motion.div
             initial={{ opacity: 0 }}
@@ -743,9 +743,9 @@ const App = () => {
       </section>
 
       {/* Footer Section */}
-      <footer className="min-h-[50vh] bg-black">
-        <div className="py-16 border-t border-gray-800">
-          <div className="container mx-auto px-4">
+      <footer className="w-full bg-black relative">
+        <div className="border-t border-gray-800">
+          <div className="container mx-auto px-4 py-16">
             <div className="flex flex-col items-center mb-12">
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
