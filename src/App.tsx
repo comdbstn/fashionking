@@ -271,7 +271,7 @@ const App = () => {
               animate={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={scrollToPreRegister}
+              onClick={() => scrollToSection(1)}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="bg-[#ee0202] text-white px-12 py-4 rounded-full text-xl font-semibold hover:bg-[#cc0101] transition-colors w-auto min-w-[200px] relative overflow-hidden group"
             >
@@ -845,7 +845,9 @@ const App = () => {
                 콘텐츠 제휴, 마케팅, 사업 및 투자 관련 문의
               </motion.p>
               <motion.a
-                href="mailto:contact@zzol.com"
+                href="http://pf.kakao.com/_DxnAZG/chat"
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
