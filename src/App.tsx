@@ -273,7 +273,7 @@ const App = () => {
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection(1)}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="bg-[#ee0202] text-white px-12 py-4 rounded-full text-xl font-semibold hover:bg-[#cc0101] transition-colors w-auto min-w-[200px] relative overflow-hidden group"
+              className="bg-[#ee0202] text-white px-8 py-5 rounded-full text-xl font-semibold hover:bg-[#cc0101] transition-colors w-[180px] h-[60px] relative overflow-hidden group flex items-center justify-center"
             >
               <span className="relative z-10 whitespace-nowrap">사전예약</span>
               <motion.div
