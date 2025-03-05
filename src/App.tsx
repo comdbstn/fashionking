@@ -129,23 +129,8 @@ const App = () => {
 
   return (
     <div ref={containerRef} className="w-full min-h-screen bg-black">
-      {/* Progress Bar */}
-      <motion.div
-        className="fixed right-[20px] top-0 w-[4px] h-full bg-gray-800 z-50"
-        style={{ originY: 0 }}
-      >
-        <motion.div
-          className="w-full bg-[#ee0202]"
-          style={{ scaleY, height: "100%" }}
-        />
-      </motion.div>
-
       {/* Navigation Dots */}
       <div className="fixed right-[40px] top-1/2 transform -translate-y-1/2 z-50 flex flex-col gap-4">
-        <motion.div
-          className="fixed top-0 right-[48px] w-[2px] h-full bg-gray-500 origin-top"
-          style={{ scaleY }}
-        />
         {sections.map((section, index) => (
           <motion.div
             key={section}
@@ -288,9 +273,9 @@ const App = () => {
               whileTap={{ scale: 0.95 }}
               onClick={scrollToPreRegister}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="bg-[#ee0202] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#cc0101] transition-colors w-fit relative overflow-hidden group"
+              className="bg-[#ee0202] text-white px-12 py-4 rounded-full text-xl font-semibold hover:bg-[#cc0101] transition-colors w-auto min-w-[200px] relative overflow-hidden group"
             >
-              <span className="relative z-10">사전예약</span>
+              <span className="relative z-10 whitespace-nowrap">사전예약</span>
               <motion.div
                 className="absolute inset-0 bg-white opacity-20"
                 initial={{ x: "-100%" }}
