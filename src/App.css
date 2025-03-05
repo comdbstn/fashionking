@@ -1,0 +1,123 @@
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background: black;
+  height: 100%;
+  overflow: hidden;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Navigation dots styles */
+.rounded-full {
+  transition: transform 0.2s ease-out, background-color 0.2s ease-out;
+  width: 12px;
+  height: 12px;
+  position: relative;
+  z-index: 60;
+}
+
+.rounded-full:hover {
+  transform: scale(1.2);
+  background-color: #ee0202 !important;
+}
+
+/* Animation classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.section-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Gradient backgrounds */
+.gradient-bg {
+  background: radial-gradient(circle at center, rgba(238, 2, 2, 0.1) 0%, transparent 70%);
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Button styles */
+button {
+  font-size: 1.125rem;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-width: 160px;
+  text-align: center;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(238, 2, 2, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Progress bar styles */
+.progress-bar-container {
+  position: fixed;
+  right: 20px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 50;
+}
+
+.progress-bar-indicator {
+  height: 100%;
+  background-color: #ee0202;
+  transform-origin: top;
+} 
