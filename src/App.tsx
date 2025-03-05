@@ -1,4 +1,4 @@
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState, useRef, useEffect } from 'react';
 import './App.css';
@@ -12,12 +12,6 @@ const App = () => {
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"]
-  });
-
-  const scaleY = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
   });
 
   useEffect(() => {
