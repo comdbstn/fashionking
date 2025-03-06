@@ -83,26 +83,22 @@ section {
 }
 
 /* Button styles */
-button {
-  font-size: 1.125rem;
-  padding: 0.75rem 2rem;
-  border-radius: 9999px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  min-width: 160px;
+.bg-\[\#ee0202\] {
+  box-shadow: 0 4px 6px rgba(238, 2, 2, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-button:hover {
+.bg-\[\#ee0202\]:hover {
+  box-shadow: 0 6px 12px rgba(238, 2, 2, 0.3);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(238, 2, 2, 0.2);
 }
 
-button:active {
+.bg-\[\#ee0202\]:active {
   transform: translateY(0);
-  box-shadow: none;
+  box-shadow: 0 2px 4px rgba(238, 2, 2, 0.2);
 }
 
 /* Progress bar styles */
