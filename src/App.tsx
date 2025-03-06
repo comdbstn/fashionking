@@ -134,14 +134,6 @@ const App = () => {
 
   return (
     <div ref={containerRef} className="w-full min-h-screen bg-black">
-      {/* Progress Bar */}
-      <motion.div className="fixed right-[20px] top-0 w-[4px] h-full bg-gray-800 z-50">
-        <motion.div
-          className="w-full bg-[#ee0202]"
-          style={{ scaleY, transformOrigin: "top" }}
-        />
-      </motion.div>
-
       {/* Navigation Dots */}
       <div className="fixed right-[40px] top-1/2 transform -translate-y-1/2 z-50 flex flex-col gap-4">
         {sections.map((section, index) => (
