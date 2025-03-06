@@ -898,7 +898,11 @@ const App = () => {
               className="flex flex-col md:flex-row justify-between items-center border-t border-gray-800 pt-8"
             >
               <div className="flex items-center mb-4 md:mb-0">
-                <span className="text-[#ee0202] text-2xl font-bold tracking-wider">ZZOL</span>
+                <img 
+                  src="/images/zzol-logo.png"
+                  alt="ZZOL"
+                  className="h-[30px] w-auto"
+                />
               </div>
               <div className="flex space-x-6">
                 <a
