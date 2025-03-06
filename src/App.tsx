@@ -1,4 +1,4 @@
-import { motion, useScroll } from 'framer-motion';
+import { motion, useScroll, useSpring } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState, useRef, useEffect } from 'react';
 import './App.css';
@@ -14,19 +14,25 @@ const App = () => {
     offset: ["start start", "end end"]
   });
 
+  const scaleY = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
   useEffect(() => {
+    const rootElement = document.getElementById('root');
+    if (!rootElement) return;
+
     const handleScroll = () => {
-      const pageYOffset = window.pageYOffset;
+      const scrollPosition = rootElement.scrollTop;
       const windowHeight = window.innerHeight;
       
       let newSection = 0;
       sectionRefs.current.forEach((section, index) => {
         if (section) {
           const sectionTop = section.offsetTop;
-          const sectionBottom = sectionTop + section.offsetHeight;
-          
-          if (pageYOffset >= sectionTop - windowHeight / 2 && 
-              pageYOffset < sectionBottom - windowHeight / 2) {
+          if (scrollPosition >= sectionTop - windowHeight / 3) {
             newSection = index;
           }
         }
@@ -37,20 +43,25 @@ const App = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    rootElement.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
     
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      rootElement.removeEventListener('scroll', handleScroll);
+    };
   }, [currentSection]);
 
   const scrollToSection = (index: number) => {
     const section = sectionRefs.current[index];
     if (section) {
-      const offset = section.offsetTop;
-      window.scrollTo({
-        top: offset,
-        behavior: 'smooth'
-      });
+      const rootElement = document.getElementById('root');
+      if (rootElement) {
+        const offset = section.offsetTop;
+        rootElement.scrollTo({
+          top: offset,
+          behavior: 'smooth'
+        });
+      }
     }
   };
 
@@ -123,6 +134,14 @@ const App = () => {
 
   return (
     <div ref={containerRef} className="w-full min-h-screen bg-black">
+      {/* Progress Bar */}
+      <motion.div className="fixed right-[20px] top-0 w-[4px] h-full bg-gray-800 z-50">
+        <motion.div
+          className="w-full bg-[#ee0202]"
+          style={{ scaleY, transformOrigin: "top" }}
+        />
+      </motion.div>
+
       {/* Navigation Dots */}
       <div className="fixed right-[40px] top-1/2 transform -translate-y-1/2 z-50 flex flex-col gap-4">
         {sections.map((section, index) => (
@@ -840,7 +859,9 @@ const App = () => {
                 콘텐츠 제휴, 마케팅, 사업 및 투자 관련 문의
               </motion.p>
               <motion.a
-                href="mailto:contact@freeyourmindcorp.com"
+                href="http://pf.kakao.com/_DxnAZG/chat"
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
