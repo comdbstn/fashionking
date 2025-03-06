@@ -859,7 +859,7 @@ const App = () => {
                 콘텐츠 제휴, 마케팅, 사업 및 투자 관련 문의
               </motion.p>
               <motion.a
-                href="http://pf.kakao.com/_DxnAZG/chat"
+                href="mailto:contact@freeyourmindcorp.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
