@@ -219,9 +219,10 @@ const App = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-[#ee0202] text-3xl font-bold"
+            className="text-[#ee0202] text-3xl font-bold cursor-pointer"
+            onClick={() => window.location.reload()}
           >
-            zzol?
+            ZZOL
           </motion.span>
         </div>
 
@@ -839,9 +840,7 @@ const App = () => {
                 콘텐츠 제휴, 마케팅, 사업 및 투자 관련 문의
               </motion.p>
               <motion.a
-                href="http://pf.kakao.com/_DxnAZG/chat"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:contact@freeyourmindcorp.com"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
@@ -858,11 +857,11 @@ const App = () => {
               className="flex flex-col md:flex-row justify-between items-center border-t border-gray-800 pt-8"
             >
               <div className="flex items-center mb-4 md:mb-0">
-                <span className="text-[#ee0202] text-2xl font-bold tracking-wider">ZZOL?</span>
+                <span className="text-[#ee0202] text-2xl font-bold tracking-wider">ZZOL</span>
               </div>
               <div className="flex space-x-6">
                 <a
-                  href="https://instagram.com/zzol"
+                  href="https://www.instagram.com/zzol_studio_official/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
@@ -880,7 +879,7 @@ const App = () => {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="text-center text-gray-500 text-sm mt-8"
             >
-              © 2024 ZZOL. All rights reserved.
+              © 2025 ZZOL. All rights reserved.
             </motion.div>
           </motion.div>
         </div>
