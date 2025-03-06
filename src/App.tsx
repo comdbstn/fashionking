@@ -118,7 +118,7 @@ const App = () => {
 
       // 두 번째 이메일 템플릿으로 전송
       const templateParams2 = {
-        to_email: 'director@freeyourmindcorp.com',
+        to_email: 'ampfounder@gmail.com',
         from_name: formData.name,
         phone: formData.phone,
         email: formData.email,
