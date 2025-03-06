@@ -99,8 +99,22 @@ const App = () => {
     setSubmitStatus({ isSubmitting: true, isSuccess: false, message: '' });
     
     try {
-      // 로컬에서만 처리하도록 변경
-      console.log('사전예약 신청:', formData);
+      // 이메일 내용 구성
+      const subject = encodeURIComponent('[ZZOL] 새로운 사전예약 신청');
+      const body = encodeURIComponent(
+        `새로운 사전예약 신청이 있습니다.\n\n` +
+        `이름: ${formData.name}\n` +
+        `전화번호: ${formData.phone}\n` +
+        `이메일: ${formData.email}\n` +
+        `개인정보 수집 동의: 예\n\n` +
+        `신청 일시: ${new Date().toLocaleString('ko-KR')}`
+      );
+
+      // Gmail 작성 페이지 열기
+      window.open(
+        `https://mail.google.com/mail/?view=cm&fs=1&to=director@freeyourmindcorp.com&su=${subject}&body=${body}`,
+        '_blank'
+      );
       
       setSubmitStatus({
         isSubmitting: false,
