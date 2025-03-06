@@ -213,17 +213,17 @@ const App = () => {
           ))}
         </div>
 
-        {/* ZZOL? Logo */}
+        {/* ZZOL Logo */}
         <div className="fixed top-8 left-8 z-50">
-          <motion.span 
+          <motion.img 
+            src="/images/zzol-logo.png"
+            alt="ZZOL"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-[#ee0202] text-3xl font-bold cursor-pointer"
+            className="h-[40px] w-auto cursor-pointer"
             onClick={() => window.location.reload()}
-          >
-            ZZOL
-          </motion.span>
+          />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
