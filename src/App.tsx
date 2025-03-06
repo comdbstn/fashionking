@@ -100,8 +100,8 @@ const App = () => {
     setSubmitStatus({ isSubmitting: true, isSuccess: false, message: '' });
     
     try {
-      // EmailJS를 사용하여 이메일 전송
-      const templateParams = {
+      // 첫 번째 이메일 템플릿으로 전송
+      const templateParams1 = {
         to_email: 'director@freeyourmindcorp.com',
         from_name: formData.name,
         phone: formData.phone,
@@ -111,8 +111,24 @@ const App = () => {
 
       await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        templateParams,
+        'template_q5qyi3b',
+        templateParams1,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      // 두 번째 이메일 템플릿으로 전송
+      const templateParams2 = {
+        to_email: 'director@freeyourmindcorp.com',
+        from_name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        submit_time: new Date().toLocaleString('ko-KR')
+      };
+
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        'template_5jariry',
+        templateParams2,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
       
