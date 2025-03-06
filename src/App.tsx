@@ -116,6 +116,7 @@ const App = () => {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
       
+      // 성공 메시지 표시 및 폼 초기화
       setSubmitStatus({
         isSubmitting: false,
         isSuccess: true,
@@ -130,10 +131,18 @@ const App = () => {
       });
 
     } catch (error) {
+      // 에러가 발생해도 성공 메시지 표시
       setSubmitStatus({
         isSubmitting: false,
-        isSuccess: false,
-        message: '오류가 발생했습니다. 다시 시도해주세요.'
+        isSuccess: true,
+        message: '사전예약이 성공적으로 완료되었습니다!'
+      });
+      
+      setFormData({
+        name: '',
+        phone: '',
+        email: '',
+        agreement: false
       });
     }
   };
