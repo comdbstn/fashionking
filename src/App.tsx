@@ -858,6 +858,10 @@ const App = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open('https://mail.google.com/mail/?view=cm&fs=1&to=contact@freeyourmindcorp.com', '_blank');
+                }}
               >
                 문의하기
               </motion.a>
