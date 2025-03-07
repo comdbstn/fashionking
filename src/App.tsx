@@ -8,6 +8,7 @@ const App = () => {
   // EmailJS 초기화
   useEffect(() => {
     emailjs.init("_t9ietLJwjbLUjlLv");
+    console.log("EmailJS initialized");
   }, []);
 
   const containerRef = useRef<HTMLDivElement>(null);
