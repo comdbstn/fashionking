@@ -264,7 +264,7 @@ const App = () => {
         </div>
 
         {/* ZZOL Logo */}
-        <div className="fixed top-4 md:top-8 left-4 md:left-8 z-50">
+        <div className="fixed top-4 md:top-8 right-4 md:left-8 z-50">
           <motion.img 
             src="/images/zzol-logo.png"
             alt="ZZOL"
