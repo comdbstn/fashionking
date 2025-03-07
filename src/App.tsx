@@ -103,7 +103,7 @@ const App = () => {
     setSubmitStatus({ isSubmitting: true, isSuccess: false, message: '' });
     
     try {
-      // 첫 번째 이메일 템플릿으로 전송
+      // 첫 번째 이메일 전송 (director@freeyourmindcorp.com)
       const templateParams1 = {
         to_email: 'director@freeyourmindcorp.com',
         from_name: formData.name,
@@ -119,7 +119,9 @@ const App = () => {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
-      // 두 번째 이메일 템플릿으로 전송
+      console.log('첫 번째 이메일 전송 성공');
+
+      // 두 번째 이메일 전송 (ampfounder@gmail.com)
       const templateParams2 = {
         to_email: 'ampfounder@gmail.com',
         from_name: formData.name,
@@ -134,6 +136,8 @@ const App = () => {
         templateParams2,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
+
+      console.log('두 번째 이메일 전송 성공');
       
       // 성공 메시지 표시 및 폼 초기화
       setSubmitStatus({
@@ -150,18 +154,11 @@ const App = () => {
       });
 
     } catch (error) {
-      // 에러가 발생해도 성공 메시지 표시
+      console.error('이메일 전송 실패:', error);
       setSubmitStatus({
         isSubmitting: false,
-        isSuccess: true,
-        message: '사전예약이 성공적으로 완료되었습니다!'
-      });
-      
-      setFormData({
-        name: '',
-        phone: '',
-        email: '',
-        agreement: false
+        isSuccess: false,
+        message: '사전예약 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.'
       });
     }
   };
