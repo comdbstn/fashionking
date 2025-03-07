@@ -207,7 +207,7 @@ const App = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-[1]"
         />
 
         {/* Moving Gradient Orbs */}
@@ -222,7 +222,7 @@ const App = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#ee0202] rounded-full blur-[150px] opacity-30"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#ee0202] rounded-full blur-[150px] opacity-30 z-[1]"
         />
 
         <motion.div
@@ -236,7 +236,7 @@ const App = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#ee0202] rounded-full blur-[150px] opacity-20"
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#ee0202] rounded-full blur-[150px] opacity-20 z-[1]"
         />
 
         {/* Phone Image Overlay Gradient */}
@@ -412,23 +412,22 @@ const App = () => {
       {/* Pre-registration Section */}
       <section 
         ref={el => sectionRefs.current[1] = el}
-        className="min-h-[100dvh] w-full bg-black flex items-center justify-center relative"
+        className="min-h-[100dvh] w-full bg-black flex items-center justify-center relative py-8 md:py-0"
       >
         <div className="container mx-auto px-4 max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="w-full"
           >
-            <h2 className="text-[#ee0202] text-4xl font-bold text-center mb-8">사전예약 신청</h2>
+            <h2 className="text-[#ee0202] text-2xl md:text-4xl font-bold text-center mb-4 md:mb-8">사전예약 신청</h2>
             
             {submitStatus.message && (
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className={`text-center p-4 rounded-lg mb-8 ${
+                className={`text-center p-3 md:p-4 rounded-lg mb-4 md:mb-8 ${
                   submitStatus.isSuccess ? 'bg-green-500/10 text-green-500' : 'bg-red-500/10 text-red-500'
                 }`}
               >
@@ -436,7 +435,7 @@ const App = () => {
               </motion.div>
             )}
 
-            <div className="text-gray-400 text-center text-lg mb-12 leading-relaxed max-w-3xl mx-auto">
+            <div className="text-gray-400 text-center text-base md:text-lg mb-6 md:mb-12 leading-relaxed max-w-3xl mx-auto">
               <p className="text-gray-400 text-base md:text-lg leading-relaxed font-['Pretendard'] font-medium">
                 쫄에서는 AI 기술을 통해 구현된 나의 모습을 제약없이 스타일링 할 수 있습니다.
               </p>
