@@ -5,9 +5,9 @@ import emailjs from '@emailjs/browser';
 import './App.css';
 
 // EmailJS 초기화
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-console.log('EmailJS Public Key:', PUBLIC_KEY); // 키가 제대로 로드되는지 확인
-emailjs.init(PUBLIC_KEY);
+useEffect(() => {
+  emailjs.init("_t9ietLJwjbLUjlLv");
+}, []);
 
 const App = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -115,10 +115,10 @@ const App = () => {
       };
 
       await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        'template_q5qyi3b',
+        "service_ur79r3n",
+        "template_q5qyi3b",
         templateParams1,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        "_t9ietLJwjbLUjlLv"
       );
 
       console.log('첫 번째 이메일 전송 성공');
@@ -133,10 +133,10 @@ const App = () => {
       };
 
       await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        'template_5jariry',
+        "service_ur79r3n",
+        "template_5jariry",
         templateParams2,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        "_t9ietLJwjbLUjlLv"
       );
 
       console.log('두 번째 이메일 전송 성공');
