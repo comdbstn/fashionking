@@ -174,7 +174,7 @@ const App = () => {
   return (
     <div ref={containerRef} className="w-full min-h-screen bg-black">
       {/* Navigation Dots */}
-      <div className="fixed right-[40px] top-1/2 transform -translate-y-1/2 z-50 flex flex-col gap-4">
+      <div className="fixed right-[20px] md:right-[40px] top-1/2 transform -translate-y-1/2 z-50 hidden md:flex flex-col gap-4">
         {sections.map((section, index) => (
           <motion.div
             key={section}
@@ -264,14 +264,14 @@ const App = () => {
         </div>
 
         {/* ZZOL Logo */}
-        <div className="fixed top-8 md:left-8 right-8 md:right-auto z-50">
+        <div className="fixed top-4 md:top-8 left-4 md:left-8 z-50">
           <motion.img 
             src="/images/zzol-logo.png"
             alt="ZZOL"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="h-[40px] w-auto cursor-pointer"
+            className="h-[30px] md:h-[40px] w-auto cursor-pointer"
             onClick={() => window.location.reload()}
           />
         </div>
@@ -412,9 +412,9 @@ const App = () => {
       {/* Pre-registration Section */}
       <section 
         ref={el => sectionRefs.current[1] = el}
-        className="min-h-[100dvh] w-full bg-black flex items-center justify-center relative py-8 md:py-0"
+        className="min-h-[100dvh] w-full bg-black flex items-center justify-center relative py-12 md:py-0 px-4 md:px-0"
       >
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -435,48 +435,48 @@ const App = () => {
               </motion.div>
             )}
 
-            <div className="text-gray-400 text-center text-base md:text-lg mb-6 md:mb-12 leading-relaxed max-w-3xl mx-auto">
-              <p className="text-gray-400 text-base md:text-lg leading-relaxed font-['Pretendard'] font-medium">
+            <div className="text-gray-400 text-center text-sm md:text-base mb-6 md:mb-8 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-gray-400 leading-relaxed font-['Pretendard'] font-medium">
                 쫄에서는 AI 기술을 통해 구현된 나의 모습을 제약없이 스타일링 할 수 있습니다.
               </p>
-              <p className="mt-4 text-gray-400 text-base md:text-lg leading-relaxed font-['Pretendard'] font-medium">
+              <p className="mt-3 text-gray-400 leading-relaxed font-['Pretendard'] font-medium">
                 옷을 잘 아는 여러분의 감각으로 패션 피플들과의 배틀에서 승부해 보세요.
               </p>
             </div>
             
-            <form onSubmit={handleSubmit} className="space-y-8 max-w-lg mx-auto">
+            <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8 max-w-lg mx-auto">
               <div>
-                <label className="text-gray-400 block mb-3">이름</label>
+                <label className="text-gray-400 block mb-2 md:mb-3 text-sm md:text-base">이름</label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full bg-[#1a1a1a] border-none rounded-lg px-4 py-4 text-white focus:outline-none focus:ring-2 focus:ring-[#ee0202]"
+                  className="w-full bg-[#1a1a1a] border-none rounded-lg px-4 py-3 md:py-4 text-white focus:outline-none focus:ring-2 focus:ring-[#ee0202] text-sm md:text-base"
                   placeholder="홍길동"
                 />
               </div>
               
               <div>
-                <label className="text-gray-400 block mb-3">전화번호</label>
+                <label className="text-gray-400 block mb-2 md:mb-3 text-sm md:text-base">전화번호</label>
                 <input
                   type="tel"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full bg-[#1a1a1a] border-none rounded-lg px-4 py-4 text-white focus:outline-none focus:ring-2 focus:ring-[#ee0202]"
+                  className="w-full bg-[#1a1a1a] border-none rounded-lg px-4 py-3 md:py-4 text-white focus:outline-none focus:ring-2 focus:ring-[#ee0202] text-sm md:text-base"
                   placeholder="010-0000-0000"
                 />
               </div>
               
               <div>
-                <label className="text-gray-400 block mb-3">이메일</label>
+                <label className="text-gray-400 block mb-2 md:mb-3 text-sm md:text-base">이메일</label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full bg-[#1a1a1a] border-none rounded-lg px-4 py-4 text-white focus:outline-none focus:ring-2 focus:ring-[#ee0202]"
+                  className="w-full bg-[#1a1a1a] border-none rounded-lg px-4 py-3 md:py-4 text-white focus:outline-none focus:ring-2 focus:ring-[#ee0202] text-sm md:text-base"
                   placeholder="example@email.com"
                 />
               </div>
@@ -487,9 +487,9 @@ const App = () => {
                   name="agreement"
                   checked={formData.agreement}
                   onChange={handleChange}
-                  className="w-5 h-5 text-[#ee0202] border-none rounded focus:ring-0 focus:ring-offset-0 bg-[#1a1a1a]"
+                  className="w-4 h-4 md:w-5 md:h-5 text-[#ee0202] border-none rounded focus:ring-0 focus:ring-offset-0 bg-[#1a1a1a]"
                 />
-                <label className="ml-3 text-gray-400">
+                <label className="ml-2 md:ml-3 text-gray-400 text-sm md:text-base">
                   개인정보 수집 및 이용에 동의합니다.
                 </label>
               </div>
@@ -498,7 +498,7 @@ const App = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 disabled={submitStatus.isSubmitting}
-                className={`w-full bg-[#ee0202] text-white py-4 rounded-lg text-lg font-semibold transition-colors mt-8 ${
+                className={`w-full bg-[#ee0202] text-white py-3 md:py-4 rounded-lg text-base md:text-lg font-semibold transition-colors mt-6 md:mt-8 ${
                   submitStatus.isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#cc0101]'
                 }`}
                 type="submit"
