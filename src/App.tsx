@@ -747,7 +747,7 @@ const App = () => {
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 1 }}
-                    className="relative z-10"
+                    className="relative z-20"
                   >
                     <motion.img
                       initial={{ y: 20, opacity: 0 }}
@@ -756,7 +756,7 @@ const App = () => {
                       transition={{ duration: 0.8, delay: 0.4 }}
                       src="/images/section5-vsimage-new.png"
                       alt="Battle System"
-                      className="w-full h-auto object-contain md:object-cover rounded-2xl shadow-lg"
+                      className="w-full h-[50vh] md:h-[90vh] object-contain md:object-cover rounded-2xl shadow-lg"
                     />
                   </motion.div>
                   <motion.div 
