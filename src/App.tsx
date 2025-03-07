@@ -848,7 +848,7 @@ const App = () => {
                       transition={{ duration: 0.8, delay: 0.4 }}
                       src="/images/section6-trophy-new.png"
                       alt="Ranking System Trophy"
-                      className="w-full h-auto object-contain md:object-cover rounded-2xl shadow-lg"
+                      className="w-full h-auto object-contain rounded-2xl"
                     />
                   </motion.div>
                   <motion.div 
