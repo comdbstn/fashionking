@@ -127,7 +127,7 @@ const App = () => {
 
       await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        'template_q5qyi3b',
+        'template_5jariry',
         templateParams2,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
