@@ -819,7 +819,7 @@ const App = () => {
                   transition={{ duration: 0.8, delay: 0.4 }}
                   className="text-gray-400 text-sm md:text-lg leading-relaxed font-['Pretendard'] font-medium"
                 >
-                  쫄은 시존재 형식의 계층 기반 시스템으로<br />
+                  쫄은 시즌제 형식의 계층 기반 시스템으로<br />
                   경쟁 형식을 체택함으로써 유저의 명성을 조성합니다.<br />
                   이젠 쫄티어로 여러분의 감각을 자랑해 보세요.
                 </motion.p>
