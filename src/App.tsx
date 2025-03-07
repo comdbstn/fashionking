@@ -740,7 +740,7 @@ const App = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="w-full md:w-1/2 flex justify-center items-center"
               >
-                <div className="relative w-full max-w-2xl px-4 md:px-0">
+                <div className="relative w-full max-w-2xl">
                   <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
@@ -755,15 +755,15 @@ const App = () => {
                       transition={{ duration: 0.8, delay: 0.4 }}
                       src="/images/section5-vsimage-newver.png"
                       alt="Battle System"
-                      className="w-full h-[50vh] md:h-[90vh] object-contain md:object-cover rounded-2xl shadow-lg"
+                      className="w-full h-auto object-contain"
                     />
                   </motion.div>
                   <motion.div 
                     initial={{ scale: 0.8, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 0.6 }}
+                    whileInView={{ scale: 1, opacity: 0.3 }}
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 1.2, delay: 0.2 }}
-                    className="absolute bottom-[-10%] md:bottom-[-20%] left-1/2 transform -translate-x-1/2 w-64 md:w-96 h-64 md:h-96 bg-[#ee0202] rounded-full blur-3xl -z-10" 
+                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#ee0202] rounded-full blur-3xl -z-10" 
                   />
                 </div>
               </motion.div>
