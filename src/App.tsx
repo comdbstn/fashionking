@@ -282,7 +282,7 @@ const App = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-lg md:text-2xl mb-4 md:mb-6 text-left"
+              className="text-lg md:text-2xl mb-4 md:mb-6 text-left font-['Pretendard'] font-medium"
             >
               한 번도 본적 없었던 패션 배틀 플랫폼
             </motion.h1>
@@ -290,7 +290,7 @@ const App = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-2xl md:text-5xl font-bold mb-8 md:mb-12 text-left leading-relaxed"
+              className="text-2xl md:text-5xl font-bold mb-8 md:mb-12 text-left leading-relaxed font-['Pretendard'] font-extrabold"
             >
               패션 피플들이
               <br />
@@ -437,8 +437,12 @@ const App = () => {
             )}
 
             <div className="text-gray-400 text-center text-lg mb-12 leading-relaxed max-w-3xl mx-auto">
-              <p>쫄에서는 AI 기술을 통해 구현된 나의 모습을 제약없이 스타일링 할 수 있습니다.</p>
-              <p className="mt-4">옷을 잘 아는 여러분의 감각으로 패션 피플들과의 배틀에서 승부해 보세요.</p>
+              <p className="text-gray-400 text-base md:text-lg leading-relaxed font-['Pretendard'] font-medium">
+                쫄에서는 AI 기술을 통해 구현된 나의 모습을 제약없이 스타일링 할 수 있습니다.
+              </p>
+              <p className="mt-4 text-gray-400 text-base md:text-lg leading-relaxed font-['Pretendard'] font-medium">
+                옷을 잘 아는 여러분의 감각으로 패션 피플들과의 배틀에서 승부해 보세요.
+              </p>
             </div>
             
             <form onSubmit={handleSubmit} className="space-y-8 max-w-lg mx-auto">
@@ -548,7 +552,7 @@ const App = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-2xl md:text-3xl font-semibold mb-6 leading-relaxed text-gray-400"
+              className="text-2xl md:text-3xl font-semibold mb-6 leading-relaxed text-gray-400 font-['Pretendard'] font-medium"
             >
               오늘 꽤 신경 쓴 패션, 아무도 몰라줄 때.
             </motion.h2>
@@ -556,7 +560,7 @@ const App = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="text-2xl md:text-3xl font-semibold mb-6 leading-relaxed text-gray-400"
+              className="text-2xl md:text-3xl font-semibold mb-6 leading-relaxed text-gray-400 font-['Pretendard'] font-medium"
             >
               쟤보단 잘 입는 거 같은데 자꾸 인정 안 할 때.
             </motion.h2>
@@ -564,7 +568,7 @@ const App = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1 }}
-              className="text-2xl md:text-3xl font-semibold leading-relaxed text-white"
+              className="text-2xl md:text-3xl font-semibold leading-relaxed text-white font-['Pretendard'] font-extrabold"
             >
               쫄은 그런 패피들의 답답함을<br />
               해소하기 위해 등장했습니다.
@@ -609,7 +613,7 @@ const App = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-white text-3xl md:text-5xl font-bold mb-6"
+                  className="text-white text-3xl md:text-5xl font-bold mb-6 font-['Pretendard'] font-extrabold"
                 >
                   입맛에 맞게<br />
                   근데 또 제약은 없이,<br />
@@ -620,7 +624,7 @@ const App = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-gray-400 text-base md:text-lg leading-relaxed"
+                  className="text-gray-400 text-base md:text-lg leading-relaxed font-['Pretendard'] font-medium"
                 >
                   쫄의 AI 기술은 더 이상 분리된 가상의 아바타를 꾸밀 필요 없이<br />
                   유저가 오로지 자신만을 위한 "스타일링"을 할 만큼 수 있도록 합니다.<br />
@@ -709,7 +713,7 @@ const App = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-white text-3xl md:text-5xl font-bold mb-6"
+                  className="text-white text-3xl md:text-5xl font-bold mb-6 font-['Pretendard'] font-extrabold"
                 >
                   내 패션력,<br />
                   쫄에서<br />
@@ -720,7 +724,7 @@ const App = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-gray-400 text-base md:text-lg leading-relaxed"
+                  className="text-gray-400 text-base md:text-lg leading-relaxed font-['Pretendard'] font-medium"
                 >
                   쫄이 마련한 다양한 패션 배틀 카테고리에서<br />
                   패피들의 모든 코디를 공개하여<br />
@@ -803,7 +807,7 @@ const App = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-white text-3xl md:text-5xl font-bold mb-6"
+                  className="text-white text-3xl md:text-5xl font-bold mb-6 font-['Pretendard'] font-extrabold"
                 >
                   패션 랭킹 관리로,<br />
                   내 감각에<br />
@@ -814,7 +818,7 @@ const App = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-gray-400 text-base md:text-lg leading-relaxed"
+                  className="text-gray-400 text-base md:text-lg leading-relaxed font-['Pretendard'] font-medium"
                 >
                   쫄은 시존재 형식의 계층 기반 시스템으로<br />
                   경쟁 형식을 체택함으로써 유저의 명성을 조성합니다.<br />
@@ -842,7 +846,7 @@ const App = () => {
                       whileInView={{ y: 0, opacity: 1 }}
                       viewport={{ once: true, amount: 0.3 }}
                       transition={{ duration: 0.8, delay: 0.4 }}
-                      src="/images/section6-trophy.png"
+                      src="/images/section6-trophy-new.png"
                       alt="Ranking System Trophy"
                       className="w-full h-auto object-contain md:object-cover rounded-2xl shadow-lg"
                     />
@@ -915,7 +919,7 @@ const App = () => {
             >
               <div className="flex items-center mb-4 md:mb-0">
                 <img 
-                  src="/images/zzol-logo.png"
+                  src="/images/zzol-logo-new.png"
                   alt="ZZOL"
                   className="h-[30px] w-auto"
                 />
