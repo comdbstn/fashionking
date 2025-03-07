@@ -845,9 +845,14 @@ const App = () => {
                       whileInView={{ y: 0, opacity: 1 }}
                       viewport={{ once: true, amount: 0.3 }}
                       transition={{ duration: 0.8, delay: 0.4 }}
-                      src="/images/section6-trophy.png?v=2"
+                      src="/images/section6-trophy.png"
                       alt="Ranking System Trophy"
                       className="w-full h-auto object-contain rounded-2xl"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        console.error('Trophy image failed to load');
+                      }}
                     />
                   </motion.div>
                   <motion.div 
