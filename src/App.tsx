@@ -4,12 +4,12 @@ import { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import './App.css';
 
-// EmailJS 초기화
-useEffect(() => {
-  emailjs.init("_t9ietLJwjbLUjlLv");
-}, []);
-
 const App = () => {
+  // EmailJS 초기화
+  useEffect(() => {
+    emailjs.init("_t9ietLJwjbLUjlLv");
+  }, []);
+
   const containerRef = useRef<HTMLDivElement>(null);
   const [currentSection, setCurrentSection] = useState(0);
   const sections = ['hero', 'preregister', 'device', 'ai', 'battle', 'ranking', 'footer'];
