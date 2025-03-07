@@ -846,7 +846,7 @@ const App = () => {
                       whileInView={{ y: 0, opacity: 1 }}
                       viewport={{ once: true, amount: 0.3 }}
                       transition={{ duration: 0.8, delay: 0.4 }}
-                      src="/images/section6-trophy-new.png"
+                      src="/images/section6-trophy.png"
                       alt="Ranking System Trophy"
                       className="w-full h-auto object-contain rounded-2xl"
                     />
@@ -919,7 +919,7 @@ const App = () => {
             >
               <div className="flex items-center mb-4 md:mb-0">
                 <img 
-                  src="/images/zzol-logo-new.png"
+                  src="/images/zzol-logo.png"
                   alt="ZZOL"
                   className="h-[30px] w-auto"
                 />
