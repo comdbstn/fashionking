@@ -5,7 +5,6 @@ import emailjs from '@emailjs/browser';
 import './App.css';
 
 const App = () => {
-  // EmailJS 초기화
   useEffect(() => {
     emailjs.init("_t9ietLJwjbLUjlLv");
     console.log("EmailJS initialized");
