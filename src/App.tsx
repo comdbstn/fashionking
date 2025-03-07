@@ -746,7 +746,7 @@ const App = () => {
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 1 }}
-                    className="relative z-20"
+                    className="relative z-20 flex justify-center items-center"
                   >
                     <motion.img
                       initial={{ y: 20, opacity: 0 }}
@@ -755,7 +755,7 @@ const App = () => {
                       transition={{ duration: 0.8, delay: 0.4 }}
                       src="/images/section5-vsimage-newver.png"
                       alt="Battle System"
-                      className="w-full h-auto object-contain"
+                      className="w-[90%] md:w-[80%] h-auto object-contain"
                     />
                   </motion.div>
                   <motion.div 
@@ -763,7 +763,7 @@ const App = () => {
                     whileInView={{ scale: 1, opacity: 0.3 }}
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 1.2, delay: 0.2 }}
-                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#ee0202] rounded-full blur-3xl -z-10" 
+                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[80%] h-full bg-[#ee0202] rounded-full blur-3xl -z-10" 
                   />
                 </div>
               </motion.div>
