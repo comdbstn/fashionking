@@ -5,7 +5,9 @@ import emailjs from '@emailjs/browser';
 import './App.css';
 
 // EmailJS 초기화
-emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+console.log('EmailJS Public Key:', PUBLIC_KEY); // 키가 제대로 로드되는지 확인
+emailjs.init(PUBLIC_KEY);
 
 const App = () => {
   const containerRef = useRef<HTMLDivElement>(null);
