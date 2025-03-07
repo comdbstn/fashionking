@@ -4,6 +4,9 @@ import { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import './App.css';
 
+// EmailJS 초기화
+emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+
 const App = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [currentSection, setCurrentSection] = useState(0);
