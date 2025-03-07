@@ -277,12 +277,12 @@ const App = () => {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col text-white max-w-3xl md:ml-24 mt-10 md:mt-20">
+          <div className="flex flex-col text-white max-w-3xl md:ml-24 mt-10 md:mt-20 px-4 md:px-0 z-20">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-lg md:text-2xl mb-4 md:mb-6 text-left font-['Pretendard'] font-medium"
+              className="text-base md:text-2xl mb-4 md:mb-6 text-left font-['Pretendard'] font-medium"
             >
               한 번도 본적 없었던 패션 배틀 플랫폼
             </motion.h1>
@@ -290,7 +290,7 @@ const App = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-2xl md:text-5xl font-bold mb-8 md:mb-12 text-left leading-relaxed font-['Pretendard'] font-extrabold"
+              className="text-xl md:text-5xl font-bold mb-8 md:mb-12 text-left leading-relaxed font-['Pretendard'] font-extrabold"
             >
               패션 피플들이
               <br />
@@ -336,7 +336,7 @@ const App = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="absolute right-[5%] md:right-[15%] bottom-[5%] md:bottom-[15%] w-[200px] md:w-[350px] rotate-[-15deg]"
+          className="absolute right-[5%] md:right-[15%] bottom-[10%] md:bottom-[15%] w-[180px] md:w-[350px] rotate-[-15deg]"
         >
           {/* Dynamic Background Behind Phone */}
           <motion.div
@@ -541,7 +541,7 @@ const App = () => {
         </motion.div>
         
         {/* Text Content */}
-        <div className="absolute bottom-32 right-20 text-right max-w-2xl">
+        <div className="absolute bottom-20 md:bottom-32 right-4 md:right-20 text-right max-w-2xl px-4 md:px-0">
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -552,7 +552,7 @@ const App = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-2xl md:text-3xl font-semibold mb-6 leading-relaxed text-gray-400 font-['Pretendard'] font-medium"
+              className="text-xl md:text-3xl font-semibold mb-6 leading-relaxed text-gray-400 font-['Pretendard'] font-medium"
             >
               오늘 꽤 신경 쓴 패션, 아무도 몰라줄 때.
             </motion.h2>
@@ -560,7 +560,7 @@ const App = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="text-2xl md:text-3xl font-semibold mb-6 leading-relaxed text-gray-400 font-['Pretendard'] font-medium"
+              className="text-xl md:text-3xl font-semibold mb-6 leading-relaxed text-gray-400 font-['Pretendard'] font-medium"
             >
               쟤보단 잘 입는 거 같은데 자꾸 인정 안 할 때.
             </motion.h2>
@@ -568,7 +568,7 @@ const App = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1 }}
-              className="text-2xl md:text-3xl font-semibold leading-relaxed text-white font-['Pretendard'] font-extrabold"
+              className="text-xl md:text-3xl font-semibold leading-relaxed text-white font-['Pretendard'] font-extrabold"
             >
               쫄은 그런 패피들의 답답함을<br />
               해소하기 위해 등장했습니다.
@@ -613,7 +613,7 @@ const App = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-white text-3xl md:text-5xl font-bold mb-6 font-['Pretendard'] font-extrabold"
+                  className="text-white text-2xl md:text-5xl font-bold mb-6 font-['Pretendard'] font-extrabold"
                 >
                   입맛에 맞게<br />
                   근데 또 제약은 없이,<br />
@@ -624,7 +624,7 @@ const App = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-gray-400 text-base md:text-lg leading-relaxed font-['Pretendard'] font-medium"
+                  className="text-gray-400 text-sm md:text-lg leading-relaxed font-['Pretendard'] font-medium"
                 >
                   쫄의 AI 기술은 더 이상 분리된 가상의 아바타를 꾸밀 필요 없이<br />
                   유저가 오로지 자신만을 위한 "스타일링"을 할 만큼 수 있도록 합니다.<br />
@@ -713,7 +713,7 @@ const App = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-white text-3xl md:text-5xl font-bold mb-6 font-['Pretendard'] font-extrabold"
+                  className="text-white text-2xl md:text-5xl font-bold mb-6 font-['Pretendard'] font-extrabold"
                 >
                   내 패션력,<br />
                   쫄에서<br />
@@ -724,7 +724,7 @@ const App = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-gray-400 text-base md:text-lg leading-relaxed font-['Pretendard'] font-medium"
+                  className="text-gray-400 text-sm md:text-lg leading-relaxed font-['Pretendard'] font-medium"
                 >
                   쫄이 마련한 다양한 패션 배틀 카테고리에서<br />
                   패피들의 모든 코디를 공개하여<br />
@@ -807,7 +807,7 @@ const App = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-white text-3xl md:text-5xl font-bold mb-6 font-['Pretendard'] font-extrabold"
+                  className="text-white text-2xl md:text-5xl font-bold mb-6 font-['Pretendard'] font-extrabold"
                 >
                   패션 랭킹 관리로,<br />
                   내 감각에<br />
@@ -818,7 +818,7 @@ const App = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-gray-400 text-base md:text-lg leading-relaxed font-['Pretendard'] font-medium"
+                  className="text-gray-400 text-sm md:text-lg leading-relaxed font-['Pretendard'] font-medium"
                 >
                   쫄은 시존재 형식의 계층 기반 시스템으로<br />
                   경쟁 형식을 체택함으로써 유저의 명성을 조성합니다.<br />
@@ -915,7 +915,7 @@ const App = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col md:flex-row justify-between items-center border-t border-gray-800 pt-8"
+              className="flex flex-col md:flex-row justify-between items-center border-t border-gray-800 pt-8 gap-4 md:gap-0"
             >
               <div className="flex items-center mb-4 md:mb-0">
                 <img 
