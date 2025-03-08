@@ -753,7 +753,7 @@ const App = () => {
                       whileInView={{ y: 0, opacity: 1 }}
                       viewport={{ once: true, amount: 0.3 }}
                       transition={{ duration: 0.8, delay: 0.4 }}
-                      src="./images/section5-vsimage-newver.png"
+                      src="/public/images/section5-vsimage-newver.png"
                       alt="Battle System"
                       className="w-[90%] md:w-[80%] h-auto object-contain"
                     />
