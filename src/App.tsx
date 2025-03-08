@@ -921,16 +921,16 @@ const App = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col md:flex-row justify-center md:justify-between items-center border-t border-gray-800 pt-8 gap-4 md:gap-0 mr-16"
+              className="flex flex-col md:flex-row justify-center items-center border-t border-gray-800 pt-8 gap-4 md:gap-0 mx-auto md:mr-16 max-w-[90%] md:max-w-full"
             >
-              <div className="flex items-center mb-4 md:mb-0">
+              <div className="flex items-center justify-center w-full md:w-auto mb-4 md:mb-0">
                 <img 
                   src="images/zzol-logo.png"
                   alt="ZZOL"
                   className="h-[30px] w-auto"
                 />
               </div>
-              <div className="flex space-x-6">
+              <div className="flex justify-center w-full md:w-auto space-x-6">
                 <a
                   href="https://www.instagram.com/zzol_studio_official/"
                   target="_blank"
