@@ -628,7 +628,7 @@ const App = () => {
                   className="text-gray-400 text-sm md:text-lg leading-relaxed font-['Pretendard'] font-medium"
                 >
                   쫄의 AI 기술은 더 이상 분리된 가상의 아바타를 꾸밀 필요 없이<br />
-                  유저가 오로지 자신만을 위한 "스타일링"을 할 만큼 수 있도록 합니다.<br />
+                  유저가 오로지 자신만을 위한 "스타일링"을 할 수 있도록 합니다.<br />
                   시공간, 가격 제약 없이 패션 감각을 뽐낼 수 있게 되는 것입니다.
                 </motion.p>
               </motion.div>
@@ -921,7 +921,7 @@ const App = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col md:flex-row justify-between items-center border-t border-gray-800 pt-8 gap-4 md:gap-0 mr-16"
+              className="flex flex-col md:flex-row justify-center md:justify-between items-center border-t border-gray-800 pt-8 gap-4 md:gap-0 mr-16"
             >
               <div className="flex items-center mb-4 md:mb-0">
                 <img 
